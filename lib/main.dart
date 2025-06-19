@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:starknet_provider/starknet_provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load();
   runApp(const MyApp());
 }
 
@@ -41,8 +44,9 @@ class _StarknetStarterDemoState extends State<StarknetStarterDemo> {
 
     try {
       // Initialize the official Starknet SDK provider
+      final rpcUrl = dotenv.env['STARKNET_RPC_URL'] ?? 'https://starknet-mainnet.public.blastapi.io';
       _provider = JsonRpcProvider(
-        nodeUri: Uri.parse('https://starknet-mainnet.g.alchemy.com/starknet/version/rpc/v0_8/fvrO3OBHh4Ogppzk89kR3kcVXP97g77o'),
+        nodeUri: Uri.parse(rpcUrl),
       );
 
       // Fetch blockchain data to prove SDK is working
@@ -88,8 +92,8 @@ class _StarknetStarterDemoState extends State<StarknetStarterDemo> {
         result: (chainId) {
           chainData = '''🔗 Network Info:
 • Chain ID: $chainId
-• Provider: Alchemy RPC
-• Status: Connected ✅''';
+• RPC: Connected ✅
+• Status: Live Data ✅''';
         },
         error: (error) {
           chainData = '❌ Chain Error: $error';
