@@ -35,6 +35,37 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+**/build/
+
+# iOS/macOS build artifacts and dependencies
+**/ios/Pods/
+**/ios/Podfile.lock
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+**/ios/build/
+**/macos/Pods/
+**/macos/Podfile.lock
+**/macos/.symlinks/
+**/macos/Flutter/ephemeral/
+**/macos/build/
+
+# Xcode user-specific files
+**/xcuserdata/
+**/*.xcworkspace/xcuserdata/
+**/*.xcodeproj/xcuserdata/
+**/*.mode1v3
+**/*.mode2v3
+**/*.perspectivev3
+**/*.pbxuser
+**/*.xccheckout
+**/*.moved-aside
+**/*.xcscmblueprint
+DerivedData/
+
+# Auto-generated plugin files
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/macos/Flutter/ephemeral/
 
 # Symbolication related
 app.*.symbols
@@ -46,3 +77,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# MCP/AI development files
+ai/
+**/mcp_*
+excalidraw.log
