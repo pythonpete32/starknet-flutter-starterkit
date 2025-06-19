@@ -37,17 +37,12 @@ migrate_working_dir/
 /build/
 **/build/
 
-# iOS/macOS build artifacts and dependencies
+# iOS build artifacts and dependencies
 **/ios/Pods/
 **/ios/Podfile.lock
 **/ios/.symlinks/
 **/ios/Flutter/ephemeral/
 **/ios/build/
-**/macos/Pods/
-**/macos/Podfile.lock
-**/macos/.symlinks/
-**/macos/Flutter/ephemeral/
-**/macos/build/
 
 # Xcode user-specific files
 **/xcuserdata/
@@ -65,7 +60,6 @@ DerivedData/
 # Auto-generated plugin files
 **/ios/Flutter/Generated.xcconfig
 **/ios/Flutter/flutter_export_environment.sh
-**/macos/Flutter/ephemeral/
 
 # Symbolication related
 app.*.symbols

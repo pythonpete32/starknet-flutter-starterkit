@@ -19,10 +19,12 @@ This provides access to:
 
 ## Core Architecture
 
+### Target Platforms
+**This project targets Android and iOS only** - desktop and web platform folders have been removed for simplicity.
+
 ### Starknet Integration
 - Uses `JsonRpcProvider` from `starknet_provider` package
 - RPC endpoint configured via `STARKNET_RPC_URL` in `.env` file
-
 
 ### Environment Configuration
 - RPC URL stored in `.env` file (not committed to git)
