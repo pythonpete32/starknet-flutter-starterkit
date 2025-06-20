@@ -1,5 +1,9 @@
 {
     "recommendations": [
-        "dart-code.flutter"
+        "dart-code.flutter",
+        "dart-code.dart-code",
+        "ms-vscode.vscode-json",
+        "ms-vscode.gitlens",
+        "ms-vscode.hexeditor"
     ]
 }
